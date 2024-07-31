@@ -3,6 +3,7 @@
   margin: 0 auto;
   /* background-color: aquamarine; */
   padding: 1em;
+  display: flex;
 }
 
 .test-bg{
@@ -21,6 +22,7 @@
   border-radius: 10px 10px 0 0;
   border: 2px solid white;
   background-color: rgb(179, 41, 172);
+  border-bottom: none;
 }
 
 .item-list{
@@ -28,6 +30,10 @@
   border: 1px dotted white;
   border-radius: 10px;
   overflow-x: hidden;
+}
+
+.item-list+.item-list{
+  margin-left: 1em;
 }
 
 .img-show{
