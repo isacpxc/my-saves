@@ -1,8 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./app.css";
 import Header from "./Header";
 import "./reusable.css";
-import axios from "axios";
+// import axios from "axios";
 import dataVideos from "./data.json";
 
 function App() {
@@ -11,6 +11,20 @@ function App() {
   //     console.log(res);
   //   });
   // }, []);
+
+  const [tagVerify, setTagVerify] = useState(0);
+
+  function handleTagVerify() {
+    setTagVerify(tagVerify + 1);
+  }
+
+  function isLengthMax(arr, i) {
+    console.log("array é " + arr.length + " e i é " + i);
+    if (arr.length === i) {
+      return 1;
+    }
+    return 0;
+  }
 
   return (
     <>
@@ -32,29 +46,41 @@ function App() {
 
       {/* ===========================content=========================== */}
       <main className="container test-bg">
-        <div className="item-list">
-          <div
-            className="img-show"
-            style={{
-              background: `url(https://img.youtube.com/vi/${dataVideos.youtube.video_1.id}/0.jpg)`,
-            }}
-          ></div>
-          <div className="info-show d-flex">
-            <span className="title-video">
-              Title: {dataVideos.youtube.video_1.title}
-            </span>
-            <span className="title-video">
-              Tags:{" "}
-              <a href="" className="high-tag">
-                #{dataVideos.youtube.video_1.tags[0]}
-              </a>
-              ,{" "}
-              <a href="" className="high-tag">
-                #{dataVideos.youtube.video_1.tags[0]},
-              </a>
-            </span>
-          </div>
-        </div>
+        {Object.values(dataVideos.youtube).map((key) => {
+          // console.log(key);
+          let id = key.id;
+          let title = key.title;
+          let tags = key.tags;
+          let countTag = 0;
+          return (
+            <div className="item-list">
+              <div
+                className="img-show"
+                style={{
+                  background: `url(https://img.youtube.com/vi/${id}/0.jpg)`,
+                }}
+              ></div>
+              <div className="info-show d-flex">
+                <span className="title-video">Title: {title}</span>
+                <span className="title-video">
+                  Tags:{" "}
+                  {tags.map((tag) => {
+                    countTag++;
+                    // handleTagVerify();
+                    console.log(isLengthMax(tags, countTag));
+                    return (
+                      <a href={`#${tag}yt`} className="high-tag">
+                        #{tag}
+                        {isLengthMax(tags, countTag) ? "" : ","}
+                      </a>
+                    );
+                  })}
+                </span>
+              </div>
+            </div>
+          );
+        })}
+        {/* {JSON.stringify(dataVideos)} */}
       </main>
       {/* =============================================================== */}
     </>
