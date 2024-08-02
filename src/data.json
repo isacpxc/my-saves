@@ -1,15 +1,41 @@
 {
   "youtube": {
     "video_1":{
-      "title": "nome",
-      "tags": ["info", "engraçado","nova"],
-      "id": "vh1ZwFbHUug"
+      "title": "Como deixa uma capinha de celular nova",
+      "tags": ["shorts", "ultilidade","receita", "limpeza"],
+      "id": "u7rMqdxzjDc"
     },
     "video_2":{
-      "title": "nome2",
-      "tags": ["info", "redes"],
-      "id": "ud9kBtZFj38"
+      "title": "Henrique e Juliano - A Maior Saudade (Cover Marcelo Coelho)",
+      "tags": ["video", "cover", "sertanejo", "vocal"],
+      "id": "4HxovUJFglA"
+    },
+    "video_3":{
+      "title": "A Maior Saudade - Henrique e Juliano (Cover)",
+      "tags": ["video", "cover", "sertanejo", "vocal"],
+      "id": "8d8cHLAhCzg"
+    },
+    "video_4":{
+      "title": "Quando digo que não tomo café",
+      "tags": ["shorts", "humor", "cafe"],
+      "id": "tsFMnZmuk00"
+    },
+    "video_5":{
+      "title": "Bruno e Henrique Na Rezenha",
+      "tags": ["shorts", "vocal", "sertanejo", "b&m"],
+      "id": "bsj5U4utzYo"
+    },
+    "video_6":{
+      "title": "ZÉ NETO cantando AGORA (Bruno e Marrone) | SERTANEJO 2020",
+      "tags": ["shorts", "vocal", "sertanejo", "cover", "b&m"],
+      "id": "0yeBq14hr04"
+    },
+    "video_7":{
+      "title": "criancinha brincando de ser traficante no meio de verdade ",
+      "tags": ["shorts", "realidade", "policia", "seguranca"],
+      "id": "SkrT9Zw41ms"
     }
+
   },
   "instagram": {
     "video_1":{

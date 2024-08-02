@@ -4,6 +4,10 @@
   /* background-color: aquamarine; */
   padding: 1em;
   display: flex;
+  flex-wrap: wrap;
+  flex-basis: 250px;
+  justify-content: center;
+  gap: 0.5em;
 }
 
 .test-bg{
@@ -31,10 +35,10 @@
   border-radius: 10px;
   overflow-x: hidden;
 }
-
+/* 
 .item-list+.item-list{
   margin-left: 1em;
-}
+} */
 
 .img-show{
   height: 140px;
@@ -54,14 +58,15 @@
   background-color: rgb(52, 43, 93);
   display: flex ;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   padding-top: 0.1em;
+  gap: 0.5em;
+  flex-wrap: wrap;  
+  height: 100px;
 }
 
 .d-flex{
   display: flex;
-  gap: 0.5em;
-  flex-wrap: wrap;
 }
 
 nav.container{
