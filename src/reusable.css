@@ -50,10 +50,6 @@
   display: block !important;
 }
 
-.img-show:hover{
-  cursor: pointer;
-}
-
 .info-show{
   background-color: rgb(52, 43, 93);
   display: flex ;
@@ -76,4 +72,25 @@ nav.container{
 
 .high-tag{
   color: rgb(230, 40, 237);
+}
+
+.add-item{
+  background-color: rgb(224, 219, 219);
+  opacity: 50%;
+  position: relative;
+  border: 5px dotted white;
+}
+
+.add-item > span{
+  opacity: 100% !important;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5em;
+}
+
+.hover-p:hover{
+  cursor: pointer;
 }

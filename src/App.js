@@ -81,6 +81,14 @@ function App() {
 
       {/* ===========================content=========================== */}
       <main className="container test-bg">
+        <div
+          className="item-list add-item hover-p"
+          onClick={(e) => {
+            e.preventDefault();
+          }}
+        >
+          <span>+</span>
+        </div>
         {Object.values(dataVideos[ref]).map((key) => {
           let id = key.id;
           let title = key.title;
@@ -89,7 +97,7 @@ function App() {
           return (
             <div className="item-list">
               <div
-                className="img-show"
+                className="img-show hover-p"
                 onClick={(e) => {
                   e.preventDefault();
                   window.open(
